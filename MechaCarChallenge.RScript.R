@@ -19,3 +19,12 @@ lot_summary <- Suspension_df %>% group_by(Manufacturing_Lot) %>% summarize(mean_
 # __________________________
 
 # DELIVARABLE 3:
+
+t.test(Suspension_df$PSI, mu=1500)
+
+t.test(subset(Suspension_df$PSI, Suspension_df$Manufacturing_Lot == 'Lot1'), mu=1500)
+
+t.test(subset(Suspension_df$PSI, Suspension_df$Manufacturing_Lot == 'Lot2'), mu=1500)
+
+t.test(subset(Suspension_df$PSI, Suspension_df$Manufacturing_Lot == 'Lot3'), mu=1500)
+
